@@ -109,7 +109,7 @@ body {
 
     .contacts {
         position: absolute;
-        top: calc(50% + calc(var(--index) * 5));
+        top: calc(50vh + calc(var(--index) * 6));
         animation: contactsFadeAnimation 1.8s;
         opacity: 0.89;
     }
@@ -146,7 +146,7 @@ body {
         }
 
         .contacts {
-            top: calc(50% + calc(var(--index) * 4));
+            top: calc(50vh + calc(var(--index) * 5));
         }
 
         .scroll-down-btn {
@@ -166,7 +166,7 @@ body {
         }
 
         .contacts {
-            top: calc(50% + calc(var(--index) * 3.5));
+            top: calc(50vh + calc(var(--index) * 4.5));
         }
 
         .scroll-down-btn {
@@ -186,7 +186,7 @@ body {
         }
 
         .contacts {
-            top: calc(50% + calc(var(--index) * 3));
+            top: calc(50vh + calc(var(--index) * 3.5));
         }
 
         .scroll-down-btn {
@@ -199,17 +199,6 @@ body {
             height: calc(var(--index) * 1.2);
         }
     }
-
-    /* @media (max-width: 768px) {
-        span {
-            font-size: calc(var(--index) * 4);
-        }
-
-        .scroll-down-btn {
-            width: calc(var(--index) * 1.2);
-            height: calc(var(--index) * 1.2);
-        }
-    } */
 }
 
 .about {
@@ -237,6 +226,7 @@ body {
         height: auto;
 
         border-radius: calc(var(--index) * 0.5);
+        opacity: 0;
     }
 
     section {
