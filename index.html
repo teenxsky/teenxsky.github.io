@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="title">
+            <span>kutorgin ruslan.</span>
+
+            <button class="scroll-down-btn"></button>
+
+            <div class="contacts">
+                <button class="telegram-btn" id="social-btn" onclick=" window.open('https://t.me/simplyflawless4ortythre3','_blank')"></button>
+                <button class="github-btn" id="social-btn" onclick=" window.open('https://github.com/teenxsky','_blank')"></button>
+                <button class="vk-btn" id="social-btn" onclick=" window.open('https://vk.com/lubymcev','_blank')"></button>
+            </div>
+        </div>
+
+        <div class="about">
+            <canvas id="webgl-canvas"></canvas>
+
+            <img id="game1" src="/style/img/game1.png" alt="face">
+            <img id="game2" src="/style/img/game2.png" alt="face">
+            <img id="messanger" src="/style/img/messanger.png" alt="face">
+            <img id="text-editor" src="style/img/text-editor.png" alt="face">
+
+            <section>
+                <p class="reveal-type" data-bg-color=#3f3f3f data-fg-color="white">
+                    Hello! My name is Ruslan.<br>
+                    I am interested in<br> 
+                    developing programs in<br>
+                    various languages,<br>
+                    including C#, C++, Python<br>
+                    and Swift. If you have<br>
+                    questions or suggestions,<br>
+                    feel free to contact me.<br>
+                    I'm always ready to help<br>
+                    and discuss new ideas.
+                </p>
+            </section>
+        </div>
+
+        <script id="js-vertex-shader" type="x-shader/x-vertex" defer>
+            attribute vec3 position;
+                        
+            void main()	{
+                gl_Position = vec4(position, 1.0);
+            }
+        </script>
+        <script id="js-fragment-shader" type="x-shader/x-fragment" defer>
+            precision highp float;
+            uniform vec2 resolution;
+            uniform float time;
+            uniform float xScale;
+            uniform float yScale;
+            uniform float distortion;
+                        
+            void main() {
+                vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+                            
+                float d = length(p) * distortion;
+                            
+                float rx = p.x * (1.0 + d);
+                float gx = p.x;
+                float bx = p.x * (1.0 - d);
+                            
+                float r = 0.025 / abs(p.y + sin((rx + time) * xScale) * yScale);
+                float g = 0.025 / abs(p.y + sin((gx + time) * xScale) * yScale);
+                float b = 0.025 / abs(p.y + sin((bx + time) * xScale) * yScale);
+                            
+                gl_FragColor = vec4(r, g, b, 1.0);
+            }
+        </script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js' defer></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js' defer></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js' defer></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js'></script>
+        <script src='https://unpkg.com/split-type' defer></script>
+        <script src='https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js' defer></script>
+        
+        <script src="js/scroll_animation.js" defer></script>
+        <script src="/js/webgl_canvas.js" defer></script>
+        <script src="/js/karaoke_animation.js" defer></script>
+    </body>
+
+</html>
