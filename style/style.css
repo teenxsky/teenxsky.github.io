@@ -221,7 +221,7 @@ body {
     img {
         opacity: 0;
         position: absolute;
-        right: calc(2.8vw);
+        right: calc(3vw);
 
         max-width: calc(45vw);
         height: auto;
