@@ -49,46 +49,46 @@ document.querySelectorAll(".title .scroll-down-btn").forEach(btn => {
     });
 });
 
-let bodyHeight = Number(document.querySelector("body").offsetHeight);
-let sectionHeight = bodyHeight / 7;
+// let bodyHeight = Number(document.querySelector("body").offsetHeight);
+// let sectionHeight = bodyHeight / 7;
 
-let tl = gsap.timeline()
-gsap.fromTo("#game1", { y: window.innerHeight, opacity: 1 }, {
-    opacity: 1, y: -window.innerHeight, duration: 5,
-    scrollTrigger: {
-        trigger: 'body',
-        start: sectionHeight,
-        end: sectionHeight * 3,
-        scrub: true,
-    }
-})
+// let tl = gsap.timeline()
+// gsap.fromTo("#game1", { y: window.innerHeight, opacity: 1 }, {
+//     opacity: 1, y: -window.innerHeight, duration: 5,
+//     scrollTrigger: {
+//         trigger: 'body',
+//         start: sectionHeight,
+//         end: sectionHeight * 3,
+//         scrub: true,
+//     }
+// })
 
-gsap.fromTo("#game2", { y: window.innerHeight, opacity: 1 }, {
-    opacity: 1, y: -window.innerHeight, duration: 5,
-    scrollTrigger: {
-        trigger: 'body',
-        start: sectionHeight * 2,
-        end: sectionHeight * 4,
-        scrub: true,
-    }
-})
+// gsap.fromTo("#game2", { y: window.innerHeight, opacity: 1 }, {
+//     opacity: 1, y: -window.innerHeight, duration: 5,
+//     scrollTrigger: {
+//         trigger: 'body',
+//         start: sectionHeight * 2,
+//         end: sectionHeight * 4,
+//         scrub: true,
+//     }
+// })
 
-gsap.fromTo("#messanger", { y: window.innerHeight, opacity: 1 }, {
-    opacity: 1, y: -window.innerHeight, duration: 5,
-    scrollTrigger: {
-        trigger: 'body',
-        start: sectionHeight * 3,
-        end: sectionHeight * 5,
-        scrub: true,
-    }
-})
+// gsap.fromTo("#messanger", { y: window.innerHeight, opacity: 1 }, {
+//     opacity: 1, y: -window.innerHeight, duration: 5,
+//     scrollTrigger: {
+//         trigger: 'body',
+//         start: sectionHeight * 3,
+//         end: sectionHeight * 5,
+//         scrub: true,
+//     }
+// })
 
-gsap.fromTo("#text-editor", { y: window.innerHeight, opacity: 1 }, {
-    opacity: 1, y: -window.innerHeight, duration: 5,
-    scrollTrigger: {
-        trigger: 'body',
-        start: sectionHeight * 4,
-        end: sectionHeight * 6,
-        scrub: true,
-    }
-})
+// gsap.fromTo("#text-editor", { y: window.innerHeight, opacity: 1 }, {
+//     opacity: 1, y: -window.innerHeight, duration: 5,
+//     scrollTrigger: {
+//         trigger: 'body',
+//         start: sectionHeight * 4,
+//         end: sectionHeight * 6,
+//         scrub: true,
+//     }
+// })

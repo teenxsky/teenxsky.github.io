@@ -58,7 +58,7 @@
 }
 
 body {
-    height: 700vh;
+    height: 300vh;
     color: white;
     background-color: #000;
     font-family: "Inter", sans-serif;
@@ -182,7 +182,7 @@ body {
     
     @media (max-width: 480px) {
         span {
-            font-size: calc(var(--index) * 3.5);
+            font-size: calc(var(--index) * 3);
         }
 
         .contacts {
@@ -218,7 +218,7 @@ body {
         filter: contrast(1.1);
     }
 
-    img {
+    /* img {
         opacity: 0;
         position: absolute;
         right: calc(3vw);
@@ -227,16 +227,20 @@ body {
         height: auto;
 
         border-radius: calc(var(--index) * 0.5);
-    }
+    } */
 
     section {
         position: absolute;
+        left: calc(3vw);
+        right: calc(3vw);
         mix-blend-mode: difference;
 
-        left: calc(5vw);
+        /* place-content: center; */
 
         p {
             font-size: calc(var(--index) * 2);
+
+            text-align: center;
             word-wrap: normal;
             white-space: nowrap;
         }
@@ -247,28 +251,28 @@ body {
             font-size: calc(var(--index) * 1.5);
         }
 
-        img {
+        /* img {
             max-width: calc(43vw);
-        }
+        } */
     }
  
     @media (max-width: 767px) {
         section p {
-            font-size: calc(var(--index) * 1.25);
+            font-size: calc(var(--index) * 1);
         }
 
-        img {
+        /* img {
             max-width: calc(40vw);
-        }
+        } */
     }
         
     @media (max-width: 480px) {
         section p {
-            font-size: calc(var(--index) * 1);
+            font-size: calc(var(--index) * .5);
         }
 
-        img {
+        /* img {
             max-width: calc(38vw);
-        }
+        } */
     }
 }
