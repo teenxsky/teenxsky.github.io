@@ -52,7 +52,7 @@ document.querySelectorAll(".title .scroll-down-btn").forEach(btn => {
 let bodyHeight = Number(document.querySelector("body").offsetHeight);
 let sectionHeight = bodyHeight / 9;
 
-gsap.fromTo("#game1", { x: window.innerWidth, opacity: 0 }, {
+gsap.fromTo("#game1", { y: window.innerWidth, opacity: 0 }, {
     opacity: 1, x: 0, duration: 2,
     scrollTrigger: {
         trigger: '.title',
@@ -75,7 +75,7 @@ gsap.fromTo("#game1", { y: 0, opacity: 1 }, {
 gsap.fromTo("#game2", { x: window.innerWidth, opacity: 0 }, {
     opacity: 1, x: 0, duration: 2, duration: 2,
     scrollTrigger: {
-        trigger: '.title',
+        trigger: 'body',
         start: sectionHeight * 2,
         end: sectionHeight * 3,
         scrub: true
@@ -95,7 +95,7 @@ gsap.fromTo("#game2", { y: 0, opacity: 1 }, {
 gsap.fromTo("#messanger", { x: window.innerWidth, opacity: 0 }, {
     opacity: 1, x: 0, duration: 2, duration: 2,
     scrollTrigger: {
-        trigger: '.title',
+        trigger: 'body',
         start: sectionHeight * 4,
         end: sectionHeight * 5,
         scrub: true
@@ -115,19 +115,9 @@ gsap.fromTo("#messanger", { y: 0, opacity: 1 }, {
 gsap.fromTo("#text-editor", { x: window.innerWidth, opacity: 0 }, {
     opacity: 1, x: 0, duration: 2,
     scrollTrigger: {
-        trigger: '.title',
+        trigger: 'body',
         start: sectionHeight * 6,
         end: sectionHeight * 7,
         scrub: true
     }
 })
-
-// gsap.fromTo("#text-editor", { y: 0, opacity: 1 }, {
-//     opacity: 0, y: -window.innerHeight,
-//     scrollTrigger: {
-//         trigger: 'body',
-//         start: sectionHeight * 7,
-//         end: sectionHeight * 9,
-//         scrub: true
-//     }
-// })

@@ -223,7 +223,6 @@ body {
     img {
         position: absolute;
         right: calc(2.8vw);
-        transform: translateX(0);
 
         max-width: calc(45vw);
         height: auto;
