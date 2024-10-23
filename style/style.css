@@ -76,7 +76,7 @@ body {
     justify-content: center;
 
     span {
-        font-size: calc(12.5vw);
+        font-size: calc(12vw);
         white-space: nowrap;
 
         --bg-size: 400%;        
@@ -194,12 +194,35 @@ body {
         position: absolute;
         mix-blend-mode: difference;
 
-        p {
+        #desktop_text { 
             font-size: calc(3.5vw);
 
             text-align: center;
             word-wrap: normal;
             white-space: nowrap;
+        }
+
+        #mobile_text { 
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width: 952px) {
+        section {
+            left: 3.5%;
+
+            #desktop_text {
+                visibility: hidden;
+            }
+
+            #mobile_text { 
+                visibility: visible;
+                font-size: calc(7vw);
+                line-height: 8vh;
+
+                word-wrap: normal;
+                white-space: nowrap;
+            }
         }
     }
 }
