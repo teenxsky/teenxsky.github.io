@@ -218,7 +218,7 @@ body {
             #mobile_text { 
                 visibility: visible;
                 font-size: calc(7vw);
-                line-height: 8vh;
+                line-height: 7vh;
 
                 word-wrap: normal;
                 white-space: nowrap;
