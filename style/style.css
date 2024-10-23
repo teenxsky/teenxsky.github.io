@@ -76,7 +76,7 @@ body {
     justify-content: center;
 
     span {
-        font-size: calc(11vw);
+        font-size: calc(12.5vw);
         white-space: nowrap;
 
         --bg-size: 400%;        
@@ -94,8 +94,8 @@ body {
 
     .scroll-down-btn { 
         position: absolute;
-        width: calc(var(--index) * .8);
-        height: calc(var(--index) * .8);
+        width: calc(1.8vw);
+        height: calc(1.8vw);
         bottom: 5%;
 
         background-image: url("/style/img/down-arrow-svgrepo-com.svg");
@@ -120,8 +120,8 @@ body {
 		margin-left: calc(var(--index) * 1);
         margin-right: calc(var(--index) * 1);
         
-        width: calc(2.5vw);
-        height: calc(2.5vw);
+        width: calc(3.25vw);
+        height: calc(3.25vw);
 
         background-color: transparent;
         background-size: cover;
@@ -139,6 +139,27 @@ body {
 
     .vk-btn {
         background-image: url("/style/img/vk.svg");
+    }
+
+    @media (max-width: 952px) {
+        #social-btn {
+            width: calc(4.5vw);
+            height: calc(4.5vw);
+        }
+    }
+
+    @media (max-width: 768px) {
+        #social-btn {
+            width: calc(5vw);
+            height: calc(5vw);
+        }
+    }
+
+    @media (max-width: 512px) {
+        #social-btn {
+            width: calc(5.5vw);
+            height: calc(5.5vw);
+        }
     }
 }
 
@@ -181,6 +202,4 @@ body {
             white-space: nowrap;
         }
     }
-
-
 }
